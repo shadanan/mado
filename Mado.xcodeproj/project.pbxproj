@@ -1,0 +1,705 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73AF11D31E46CA7B00D1CF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF11D21E46CA7B00D1CF5C /* AppDelegate.swift */; };
+		73AF11D51E46CA7B00D1CF5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73AF11D41E46CA7B00D1CF5C /* Assets.xcassets */; };
+		73AF11D81E46CA7B00D1CF5C /* ResizeProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73AF11D61E46CA7B00D1CF5C /* ResizeProfile.xib */; };
+		73AF11E31E46CA7B00D1CF5C /* MadoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF11E21E46CA7B00D1CF5C /* MadoTests.swift */; };
+		73AF11EE1E46CA7B00D1CF5C /* MadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF11ED1E46CA7B00D1CF5C /* MadoUITests.swift */; };
+		73AF11FC1E4712D100D1CF5C /* PreviewThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF11FB1E4712D100D1CF5C /* PreviewThumbnailView.swift */; };
+		73AF121D1E4720F900D1CF5C /* ResizeProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF121C1E4720F900D1CF5C /* ResizeProfile.swift */; };
+		73AF121F1E4727B000D1CF5C /* ExprEvaluate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF121E1E4727B000D1CF5C /* ExprEvaluate.swift */; };
+		73AF12201E472C5D00D1CF5C /* Antlr4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73AF12151E471FA300D1CF5C /* Antlr4.framework */; };
+		73AF122C1E47FE6B00D1CF5C /* Mado.tokens in Resources */ = {isa = PBXBuildFile; fileRef = 73AF12231E47FE6B00D1CF5C /* Mado.tokens */; };
+		73AF122D1E47FE6B00D1CF5C /* MadoBaseVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12241E47FE6B00D1CF5C /* MadoBaseVisitor.swift */; };
+		73AF122E1E47FE6B00D1CF5C /* MadoLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12251E47FE6B00D1CF5C /* MadoLexer.swift */; };
+		73AF122F1E47FE6B00D1CF5C /* MadoLexer.tokens in Resources */ = {isa = PBXBuildFile; fileRef = 73AF12261E47FE6B00D1CF5C /* MadoLexer.tokens */; };
+		73AF12301E47FE6B00D1CF5C /* MadoLexerATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12271E47FE6B00D1CF5C /* MadoLexerATN.swift */; };
+		73AF12311E47FE6B00D1CF5C /* MadoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12281E47FE6B00D1CF5C /* MadoParser.swift */; };
+		73AF12321E47FE6B00D1CF5C /* MadoParserATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12291E47FE6B00D1CF5C /* MadoParserATN.swift */; };
+		73AF12331E47FE6B00D1CF5C /* MadoVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF122A1E47FE6B00D1CF5C /* MadoVisitor.swift */; };
+		73AF12381E47FEB500D1CF5C /* Mado.g4 in Resources */ = {isa = PBXBuildFile; fileRef = 73AF12371E47FEB500D1CF5C /* Mado.g4 */; };
+		73AF123A1E4841AF00D1CF5C /* Antlr4.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73AF12151E471FA300D1CF5C /* Antlr4.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73AF11DF1E46CA7B00D1CF5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AF11C71E46CA7B00D1CF5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73AF11CE1E46CA7B00D1CF5C;
+			remoteInfo = Mado;
+		};
+		73AF11EA1E46CA7B00D1CF5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AF11C71E46CA7B00D1CF5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73AF11CE1E46CA7B00D1CF5C;
+			remoteInfo = Mado;
+		};
+		73AF12141E471FA300D1CF5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9A4211C1BCCC35000A9CD35;
+			remoteInfo = "Antlr4 OSX";
+		};
+		73AF12161E471FA300D1CF5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9A422F81BCCD47300A9CD35;
+			remoteInfo = "Antlr4 IOS";
+		};
+		73AF12181E471FA300D1CF5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9A424A81BCD348C00A9CD35;
+			remoteInfo = Antlr4Tests;
+		};
+		73AF121A1E471FE100D1CF5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F9A4211B1BCCC35000A9CD35;
+			remoteInfo = "Antlr4 OSX";
+		};
+		73AF123B1E4841AF00D1CF5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F9A4211B1BCCC35000A9CD35;
+			remoteInfo = "Antlr4 OSX";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		73AF123D1E4841AF00D1CF5C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				73AF123A1E4841AF00D1CF5C /* Antlr4.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		73AF11CF1E46CA7B00D1CF5C /* Mado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mado.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73AF11D21E46CA7B00D1CF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		73AF11D41E46CA7B00D1CF5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73AF11D71E46CA7B00D1CF5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ResizeProfile.xib; sourceTree = "<group>"; };
+		73AF11D91E46CA7B00D1CF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73AF11DE1E46CA7B00D1CF5C /* MadoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73AF11E21E46CA7B00D1CF5C /* MadoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadoTests.swift; sourceTree = "<group>"; };
+		73AF11E41E46CA7B00D1CF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73AF11E91E46CA7B00D1CF5C /* MadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73AF11ED1E46CA7B00D1CF5C /* MadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadoUITests.swift; sourceTree = "<group>"; };
+		73AF11EF1E46CA7B00D1CF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73AF11FB1E4712D100D1CF5C /* PreviewThumbnailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewThumbnailView.swift; sourceTree = "<group>"; };
+		73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Antlr4.xcodeproj; path = Antlr4Runtime/Antlr4.xcodeproj; sourceTree = "<group>"; };
+		73AF121C1E4720F900D1CF5C /* ResizeProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeProfile.swift; sourceTree = "<group>"; };
+		73AF121E1E4727B000D1CF5C /* ExprEvaluate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExprEvaluate.swift; sourceTree = "<group>"; };
+		73AF12231E47FE6B00D1CF5C /* Mado.tokens */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Mado.tokens; path = Antlr4/Mado.tokens; sourceTree = "<group>"; };
+		73AF12241E47FE6B00D1CF5C /* MadoBaseVisitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MadoBaseVisitor.swift; path = Antlr4/MadoBaseVisitor.swift; sourceTree = "<group>"; };
+		73AF12251E47FE6B00D1CF5C /* MadoLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MadoLexer.swift; path = Antlr4/MadoLexer.swift; sourceTree = "<group>"; };
+		73AF12261E47FE6B00D1CF5C /* MadoLexer.tokens */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MadoLexer.tokens; path = Antlr4/MadoLexer.tokens; sourceTree = "<group>"; };
+		73AF12271E47FE6B00D1CF5C /* MadoLexerATN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MadoLexerATN.swift; path = Antlr4/MadoLexerATN.swift; sourceTree = "<group>"; };
+		73AF12281E47FE6B00D1CF5C /* MadoParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MadoParser.swift; path = Antlr4/MadoParser.swift; sourceTree = "<group>"; };
+		73AF12291E47FE6B00D1CF5C /* MadoParserATN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MadoParserATN.swift; path = Antlr4/MadoParserATN.swift; sourceTree = "<group>"; };
+		73AF122A1E47FE6B00D1CF5C /* MadoVisitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MadoVisitor.swift; path = Antlr4/MadoVisitor.swift; sourceTree = "<group>"; };
+		73AF12371E47FEB500D1CF5C /* Mado.g4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mado.g4; sourceTree = SOURCE_ROOT; };
+		73AF123E1E4D968500D1CF5C /* Mado.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mado.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73AF11CC1E46CA7B00D1CF5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73AF12201E472C5D00D1CF5C /* Antlr4.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73AF11DB1E46CA7B00D1CF5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73AF11E61E46CA7B00D1CF5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		73AF11C61E46CA7B00D1CF5C = {
+			isa = PBXGroup;
+			children = (
+				73AF12221E47FE5300D1CF5C /* Antlr4 */,
+				73AF11D11E46CA7B00D1CF5C /* Mado */,
+				73AF11E11E46CA7B00D1CF5C /* MadoTests */,
+				73AF11EC1E46CA7B00D1CF5C /* MadoUITests */,
+				73AF11D01E46CA7B00D1CF5C /* Products */,
+				73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		73AF11D01E46CA7B00D1CF5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73AF11CF1E46CA7B00D1CF5C /* Mado.app */,
+				73AF11DE1E46CA7B00D1CF5C /* MadoTests.xctest */,
+				73AF11E91E46CA7B00D1CF5C /* MadoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73AF11D11E46CA7B00D1CF5C /* Mado */ = {
+			isa = PBXGroup;
+			children = (
+				73AF123E1E4D968500D1CF5C /* Mado.entitlements */,
+				73AF11D21E46CA7B00D1CF5C /* AppDelegate.swift */,
+				73AF121E1E4727B000D1CF5C /* ExprEvaluate.swift */,
+				73AF11FB1E4712D100D1CF5C /* PreviewThumbnailView.swift */,
+				73AF121C1E4720F900D1CF5C /* ResizeProfile.swift */,
+				73AF11D61E46CA7B00D1CF5C /* ResizeProfile.xib */,
+				73AF12371E47FEB500D1CF5C /* Mado.g4 */,
+				73AF11D41E46CA7B00D1CF5C /* Assets.xcassets */,
+				73AF11D91E46CA7B00D1CF5C /* Info.plist */,
+			);
+			path = Mado;
+			sourceTree = "<group>";
+		};
+		73AF11E11E46CA7B00D1CF5C /* MadoTests */ = {
+			isa = PBXGroup;
+			children = (
+				73AF11E21E46CA7B00D1CF5C /* MadoTests.swift */,
+				73AF11E41E46CA7B00D1CF5C /* Info.plist */,
+			);
+			path = MadoTests;
+			sourceTree = "<group>";
+		};
+		73AF11EC1E46CA7B00D1CF5C /* MadoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				73AF11ED1E46CA7B00D1CF5C /* MadoUITests.swift */,
+				73AF11EF1E46CA7B00D1CF5C /* Info.plist */,
+			);
+			path = MadoUITests;
+			sourceTree = "<group>";
+		};
+		73AF120F1E471FA300D1CF5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73AF12151E471FA300D1CF5C /* Antlr4.framework */,
+				73AF12171E471FA300D1CF5C /* Antlr4.framework */,
+				73AF12191E471FA300D1CF5C /* Antlr4Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73AF12221E47FE5300D1CF5C /* Antlr4 */ = {
+			isa = PBXGroup;
+			children = (
+				73AF12231E47FE6B00D1CF5C /* Mado.tokens */,
+				73AF12241E47FE6B00D1CF5C /* MadoBaseVisitor.swift */,
+				73AF12251E47FE6B00D1CF5C /* MadoLexer.swift */,
+				73AF12261E47FE6B00D1CF5C /* MadoLexer.tokens */,
+				73AF12271E47FE6B00D1CF5C /* MadoLexerATN.swift */,
+				73AF12281E47FE6B00D1CF5C /* MadoParser.swift */,
+				73AF12291E47FE6B00D1CF5C /* MadoParserATN.swift */,
+				73AF122A1E47FE6B00D1CF5C /* MadoVisitor.swift */,
+			);
+			name = Antlr4;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		73AF11CE1E46CA7B00D1CF5C /* Mado */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73AF11F21E46CA7B00D1CF5C /* Build configuration list for PBXNativeTarget "Mado" */;
+			buildPhases = (
+				73AF11CB1E46CA7B00D1CF5C /* Sources */,
+				73AF11CC1E46CA7B00D1CF5C /* Frameworks */,
+				73AF11CD1E46CA7B00D1CF5C /* Resources */,
+				73AF123D1E4841AF00D1CF5C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73AF121B1E471FE100D1CF5C /* PBXTargetDependency */,
+				73AF123C1E4841AF00D1CF5C /* PBXTargetDependency */,
+			);
+			name = Mado;
+			productName = Mado;
+			productReference = 73AF11CF1E46CA7B00D1CF5C /* Mado.app */;
+			productType = "com.apple.product-type.application";
+		};
+		73AF11DD1E46CA7B00D1CF5C /* MadoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73AF11F51E46CA7B00D1CF5C /* Build configuration list for PBXNativeTarget "MadoTests" */;
+			buildPhases = (
+				73AF11DA1E46CA7B00D1CF5C /* Sources */,
+				73AF11DB1E46CA7B00D1CF5C /* Frameworks */,
+				73AF11DC1E46CA7B00D1CF5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73AF11E01E46CA7B00D1CF5C /* PBXTargetDependency */,
+			);
+			name = MadoTests;
+			productName = MadoTests;
+			productReference = 73AF11DE1E46CA7B00D1CF5C /* MadoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		73AF11E81E46CA7B00D1CF5C /* MadoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73AF11F81E46CA7B00D1CF5C /* Build configuration list for PBXNativeTarget "MadoUITests" */;
+			buildPhases = (
+				73AF11E51E46CA7B00D1CF5C /* Sources */,
+				73AF11E61E46CA7B00D1CF5C /* Frameworks */,
+				73AF11E71E46CA7B00D1CF5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73AF11EB1E46CA7B00D1CF5C /* PBXTargetDependency */,
+			);
+			name = MadoUITests;
+			productName = MadoUITests;
+			productReference = 73AF11E91E46CA7B00D1CF5C /* MadoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73AF11C71E46CA7B00D1CF5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Shad Sharma";
+				TargetAttributes = {
+					73AF11CE1E46CA7B00D1CF5C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = A5S59GAS97;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					73AF11DD1E46CA7B00D1CF5C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = A5S59GAS97;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 73AF11CE1E46CA7B00D1CF5C;
+					};
+					73AF11E81E46CA7B00D1CF5C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = A5S59GAS97;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 73AF11CE1E46CA7B00D1CF5C;
+					};
+				};
+			};
+			buildConfigurationList = 73AF11CA1E46CA7B00D1CF5C /* Build configuration list for PBXProject "Mado" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 73AF11C61E46CA7B00D1CF5C;
+			productRefGroup = 73AF11D01E46CA7B00D1CF5C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 73AF120F1E471FA300D1CF5C /* Products */;
+					ProjectRef = 73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				73AF11CE1E46CA7B00D1CF5C /* Mado */,
+				73AF11DD1E46CA7B00D1CF5C /* MadoTests */,
+				73AF11E81E46CA7B00D1CF5C /* MadoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		73AF12151E471FA300D1CF5C /* Antlr4.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Antlr4.framework;
+			remoteRef = 73AF12141E471FA300D1CF5C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		73AF12171E471FA300D1CF5C /* Antlr4.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Antlr4.framework;
+			remoteRef = 73AF12161E471FA300D1CF5C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		73AF12191E471FA300D1CF5C /* Antlr4Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Antlr4Tests.xctest;
+			remoteRef = 73AF12181E471FA300D1CF5C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73AF11CD1E46CA7B00D1CF5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73AF11D51E46CA7B00D1CF5C /* Assets.xcassets in Resources */,
+				73AF122C1E47FE6B00D1CF5C /* Mado.tokens in Resources */,
+				73AF11D81E46CA7B00D1CF5C /* ResizeProfile.xib in Resources */,
+				73AF12381E47FEB500D1CF5C /* Mado.g4 in Resources */,
+				73AF122F1E47FE6B00D1CF5C /* MadoLexer.tokens in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73AF11DC1E46CA7B00D1CF5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73AF11E71E46CA7B00D1CF5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73AF11CB1E46CA7B00D1CF5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73AF12301E47FE6B00D1CF5C /* MadoLexerATN.swift in Sources */,
+				73AF12311E47FE6B00D1CF5C /* MadoParser.swift in Sources */,
+				73AF121F1E4727B000D1CF5C /* ExprEvaluate.swift in Sources */,
+				73AF122D1E47FE6B00D1CF5C /* MadoBaseVisitor.swift in Sources */,
+				73AF11FC1E4712D100D1CF5C /* PreviewThumbnailView.swift in Sources */,
+				73AF12331E47FE6B00D1CF5C /* MadoVisitor.swift in Sources */,
+				73AF11D31E46CA7B00D1CF5C /* AppDelegate.swift in Sources */,
+				73AF121D1E4720F900D1CF5C /* ResizeProfile.swift in Sources */,
+				73AF122E1E47FE6B00D1CF5C /* MadoLexer.swift in Sources */,
+				73AF12321E47FE6B00D1CF5C /* MadoParserATN.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73AF11DA1E46CA7B00D1CF5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73AF11E31E46CA7B00D1CF5C /* MadoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73AF11E51E46CA7B00D1CF5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73AF11EE1E46CA7B00D1CF5C /* MadoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73AF11E01E46CA7B00D1CF5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73AF11CE1E46CA7B00D1CF5C /* Mado */;
+			targetProxy = 73AF11DF1E46CA7B00D1CF5C /* PBXContainerItemProxy */;
+		};
+		73AF11EB1E46CA7B00D1CF5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73AF11CE1E46CA7B00D1CF5C /* Mado */;
+			targetProxy = 73AF11EA1E46CA7B00D1CF5C /* PBXContainerItemProxy */;
+		};
+		73AF121B1E471FE100D1CF5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Antlr4 OSX";
+			targetProxy = 73AF121A1E471FE100D1CF5C /* PBXContainerItemProxy */;
+		};
+		73AF123C1E4841AF00D1CF5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Antlr4 OSX";
+			targetProxy = 73AF123B1E4841AF00D1CF5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		73AF11D61E46CA7B00D1CF5C /* ResizeProfile.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73AF11D71E46CA7B00D1CF5C /* Base */,
+			);
+			name = ResizeProfile.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		73AF11F01E46CA7B00D1CF5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		73AF11F11E46CA7B00D1CF5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		73AF11F31E46CA7B00D1CF5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mado/Mado.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = A5S59GAS97;
+				INFOPLIST_FILE = Mado/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = io.shad.Mado;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		73AF11F41E46CA7B00D1CF5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mado/Mado.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = A5S59GAS97;
+				INFOPLIST_FILE = Mado/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = io.shad.Mado;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		73AF11F61E46CA7B00D1CF5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = A5S59GAS97;
+				INFOPLIST_FILE = MadoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.shad.MadoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mado.app/Contents/MacOS/Mado";
+			};
+			name = Debug;
+		};
+		73AF11F71E46CA7B00D1CF5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = A5S59GAS97;
+				INFOPLIST_FILE = MadoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.shad.MadoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mado.app/Contents/MacOS/Mado";
+			};
+			name = Release;
+		};
+		73AF11F91E46CA7B00D1CF5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = A5S59GAS97;
+				INFOPLIST_FILE = MadoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.shad.MadoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Mado;
+			};
+			name = Debug;
+		};
+		73AF11FA1E46CA7B00D1CF5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = A5S59GAS97;
+				INFOPLIST_FILE = MadoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.shad.MadoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Mado;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73AF11CA1E46CA7B00D1CF5C /* Build configuration list for PBXProject "Mado" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73AF11F01E46CA7B00D1CF5C /* Debug */,
+				73AF11F11E46CA7B00D1CF5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73AF11F21E46CA7B00D1CF5C /* Build configuration list for PBXNativeTarget "Mado" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73AF11F31E46CA7B00D1CF5C /* Debug */,
+				73AF11F41E46CA7B00D1CF5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73AF11F51E46CA7B00D1CF5C /* Build configuration list for PBXNativeTarget "MadoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73AF11F61E46CA7B00D1CF5C /* Debug */,
+				73AF11F71E46CA7B00D1CF5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73AF11F81E46CA7B00D1CF5C /* Build configuration list for PBXNativeTarget "MadoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73AF11F91E46CA7B00D1CF5C /* Debug */,
+				73AF11FA1E46CA7B00D1CF5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73AF11C71E46CA7B00D1CF5C /* Project object */;
+}
