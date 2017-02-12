@@ -100,22 +100,24 @@ class Expr: MadoVisitor<Double> {
     }
     
     static func evaluate(exprStr: String, W: Double, H: Double,
-                         x: Double, y: Double, w: Double, h: Double) throws -> Double {
-        let lexer = MadoLexer(ANTLRInputStream(exprStr))
-        let parser = try MadoParser(CommonTokenStream(lexer))
-        parser.setErrorHandler(BailErrorStrategy())
-        let visitor = Expr(W: W, H: H, x: x, y: y, w: w, h: h)
-        lexer.addErrorListener(MadoErrorListener(expr: visitor))
-        let expr = try parser.expr()
-        
-        if let error = visitor.error {
-            throw error
-        }
-        
-        if let result = visitor.visit(expr) {
-            return result
-        }
-        
-        return 0
+                         x: Double, y: Double, w: Double, h: Double) -> Double? {
+        do {
+            let lexer = MadoLexer(ANTLRInputStream(exprStr))
+            let parser = try MadoParser(CommonTokenStream(lexer))
+            parser.setErrorHandler(BailErrorStrategy())
+            let visitor = Expr(W: W, H: H, x: x, y: y, w: w, h: h)
+            lexer.addErrorListener(MadoErrorListener(expr: visitor))
+            let expr = try parser.expr()
+            
+            if visitor.error != nil {
+                return nil
+            }
+            
+            if let result = visitor.visit(expr) {
+                return result
+            }
+        } catch {}
+
+        return nil
     }
 }

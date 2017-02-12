@@ -12,7 +12,7 @@
 		73AF11D81E46CA7B00D1CF5C /* ResizeProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73AF11D61E46CA7B00D1CF5C /* ResizeProfile.xib */; };
 		73AF11E31E46CA7B00D1CF5C /* MadoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF11E21E46CA7B00D1CF5C /* MadoTests.swift */; };
 		73AF11EE1E46CA7B00D1CF5C /* MadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF11ED1E46CA7B00D1CF5C /* MadoUITests.swift */; };
-		73AF11FC1E4712D100D1CF5C /* PreviewThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF11FB1E4712D100D1CF5C /* PreviewThumbnailView.swift */; };
+		73AF11FC1E4712D100D1CF5C /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF11FB1E4712D100D1CF5C /* Thumbnail.swift */; };
 		73AF121D1E4720F900D1CF5C /* ResizeProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF121C1E4720F900D1CF5C /* ResizeProfile.swift */; };
 		73AF121F1E4727B000D1CF5C /* ExprEvaluate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF121E1E4727B000D1CF5C /* ExprEvaluate.swift */; };
 		73AF12201E472C5D00D1CF5C /* Antlr4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73AF12151E471FA300D1CF5C /* Antlr4.framework */; };
@@ -26,6 +26,9 @@
 		73AF12331E47FE6B00D1CF5C /* MadoVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF122A1E47FE6B00D1CF5C /* MadoVisitor.swift */; };
 		73AF12381E47FEB500D1CF5C /* Mado.g4 in Resources */ = {isa = PBXBuildFile; fileRef = 73AF12371E47FEB500D1CF5C /* Mado.g4 */; };
 		73AF123A1E4841AF00D1CF5C /* Antlr4.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73AF12151E471FA300D1CF5C /* Antlr4.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73AF12411E4D986C00D1CF5C /* KeyboardShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12401E4D986C00D1CF5C /* KeyboardShortcut.swift */; };
+		73AF12431E4FC7D000D1CF5C /* ResizePref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12421E4FC7D000D1CF5C /* ResizePref.swift */; };
+		73AF12451E4FD60300D1CF5C /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12441E4FD60300D1CF5C /* AppWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +109,7 @@
 		73AF11E91E46CA7B00D1CF5C /* MadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73AF11ED1E46CA7B00D1CF5C /* MadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadoUITests.swift; sourceTree = "<group>"; };
 		73AF11EF1E46CA7B00D1CF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73AF11FB1E4712D100D1CF5C /* PreviewThumbnailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewThumbnailView.swift; sourceTree = "<group>"; };
+		73AF11FB1E4712D100D1CF5C /* Thumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
 		73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Antlr4.xcodeproj; path = Antlr4Runtime/Antlr4.xcodeproj; sourceTree = "<group>"; };
 		73AF121C1E4720F900D1CF5C /* ResizeProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeProfile.swift; sourceTree = "<group>"; };
 		73AF121E1E4727B000D1CF5C /* ExprEvaluate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExprEvaluate.swift; sourceTree = "<group>"; };
@@ -120,6 +123,9 @@
 		73AF122A1E47FE6B00D1CF5C /* MadoVisitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MadoVisitor.swift; path = Antlr4/MadoVisitor.swift; sourceTree = "<group>"; };
 		73AF12371E47FEB500D1CF5C /* Mado.g4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mado.g4; sourceTree = SOURCE_ROOT; };
 		73AF123E1E4D968500D1CF5C /* Mado.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mado.entitlements; sourceTree = "<group>"; };
+		73AF12401E4D986C00D1CF5C /* KeyboardShortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardShortcut.swift; path = KeyboardShortcut/Sources/KeyboardShortcut.swift; sourceTree = "<group>"; };
+		73AF12421E4FC7D000D1CF5C /* ResizePref.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizePref.swift; sourceTree = "<group>"; };
+		73AF12441E4FD60300D1CF5C /* AppWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				73AF12221E47FE5300D1CF5C /* Antlr4 */,
+				73AF123F1E4D985100D1CF5C /* KeyboardShortcut */,
 				73AF11D11E46CA7B00D1CF5C /* Mado */,
 				73AF11E11E46CA7B00D1CF5C /* MadoTests */,
 				73AF11EC1E46CA7B00D1CF5C /* MadoUITests */,
@@ -175,8 +182,10 @@
 			children = (
 				73AF123E1E4D968500D1CF5C /* Mado.entitlements */,
 				73AF11D21E46CA7B00D1CF5C /* AppDelegate.swift */,
+				73AF12441E4FD60300D1CF5C /* AppWindow.swift */,
 				73AF121E1E4727B000D1CF5C /* ExprEvaluate.swift */,
-				73AF11FB1E4712D100D1CF5C /* PreviewThumbnailView.swift */,
+				73AF11FB1E4712D100D1CF5C /* Thumbnail.swift */,
+				73AF12421E4FC7D000D1CF5C /* ResizePref.swift */,
 				73AF121C1E4720F900D1CF5C /* ResizeProfile.swift */,
 				73AF11D61E46CA7B00D1CF5C /* ResizeProfile.xib */,
 				73AF12371E47FEB500D1CF5C /* Mado.g4 */,
@@ -227,6 +236,14 @@
 				73AF122A1E47FE6B00D1CF5C /* MadoVisitor.swift */,
 			);
 			name = Antlr4;
+			sourceTree = "<group>";
+		};
+		73AF123F1E4D985100D1CF5C /* KeyboardShortcut */ = {
+			isa = PBXGroup;
+			children = (
+				73AF12401E4D986C00D1CF5C /* KeyboardShortcut.swift */,
+			);
+			name = KeyboardShortcut;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,9 +425,12 @@
 			files = (
 				73AF12301E47FE6B00D1CF5C /* MadoLexerATN.swift in Sources */,
 				73AF12311E47FE6B00D1CF5C /* MadoParser.swift in Sources */,
+				73AF12431E4FC7D000D1CF5C /* ResizePref.swift in Sources */,
 				73AF121F1E4727B000D1CF5C /* ExprEvaluate.swift in Sources */,
 				73AF122D1E47FE6B00D1CF5C /* MadoBaseVisitor.swift in Sources */,
-				73AF11FC1E4712D100D1CF5C /* PreviewThumbnailView.swift in Sources */,
+				73AF12451E4FD60300D1CF5C /* AppWindow.swift in Sources */,
+				73AF11FC1E4712D100D1CF5C /* Thumbnail.swift in Sources */,
+				73AF12411E4D986C00D1CF5C /* KeyboardShortcut.swift in Sources */,
 				73AF12331E47FE6B00D1CF5C /* MadoVisitor.swift in Sources */,
 				73AF11D31E46CA7B00D1CF5C /* AppDelegate.swift in Sources */,
 				73AF121D1E4720F900D1CF5C /* ResizeProfile.swift in Sources */,
@@ -573,7 +593,7 @@
 				DEVELOPMENT_TEAM = A5S59GAS97;
 				INFOPLIST_FILE = Mado/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = io.shad.Mado;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -591,7 +611,7 @@
 				DEVELOPMENT_TEAM = A5S59GAS97;
 				INFOPLIST_FILE = Mado/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = io.shad.Mado;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
