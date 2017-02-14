@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ResizePref {
+class ResizePref: NSObject {
     var title: String
     var xExpr: String
     var yExpr: String
@@ -25,8 +25,12 @@ class ResizePref {
         self.shortcut = shortcut
     }
     
-    func makeMenuItem(action: Selector?) -> NSMenuItem {
-        let menuItem = NSMenuItem(title: title, action: action, keyEquivalent: shortcut.character)
+    func makeMenuItem() -> NSMenuItem {
+        let menuItem = NSMenuItem()
+        menuItem.title = title
+        menuItem.target = self
+        menuItem.action = #selector(apply)
+        menuItem.keyEquivalent = shortcut.character
         menuItem.keyEquivalentModifierMask = shortcut.keyEquivalentModifierMask
         
         let W: Double = 1920, H: Double = 1080, x: Double = 480, y: Double = 270, w: Double = 1280, h: Double = 720, TW: Double = 24, TH: Double = 14
@@ -41,7 +45,12 @@ class ResizePref {
             menuItem.image = menuItemView.render()
         }
 
-        
         return menuItem
+    }
+
+    func apply() {
+        if let frontMost = AppWindow.frontmost() {
+            frontMost.resize(pref: self)
+        }
     }
 }

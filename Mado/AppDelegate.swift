@@ -14,9 +14,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     let statusImage = NSImage(named: "StatusItem")!
     let store = NSUbiquitousKeyValueStore.default()
+    let registry = Registry()
     
-    let left = ResizePref(title: "Left", xExpr: "0", yExpr: "0", wExpr: "W/2", hExpr: "H", shortcut: KeyboardShortcut(keyCode: 1, shiftDown: false, controlDown: true, optionDown: true, commandDown: false))
-
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var xposField: NSTextField!
     @IBOutlet weak var yposField: NSTextField!
@@ -38,18 +37,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
     
+    func globalKeyDown(event: NSEvent) {
+        let shortcut = KeyboardShortcut.from(NSEvent: event)
+        print(shortcut)
+    }
+
     func loadMenu() {
         statusItem.menu = NSMenu()
         if let menu = statusItem.menu {
-            let leftMenuItem = left.makeMenuItem(action: #selector(self.resizeLeftHalf))
-            menu.addItem(leftMenuItem)
-        }
-        
-    }
-    
-    func resizeLeftHalf() {
-        if let frontMost = AppWindow.frontmost() {
-            frontMost.resize(pref: left)
+            for resizePref in registry.resizePrefs {
+                let menuItem = resizePref.makeMenuItem()
+                menu.addItem(menuItem)
+            }
         }
     }
     
