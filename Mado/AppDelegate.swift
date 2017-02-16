@@ -27,7 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusImage = NSImage(named: "StatusItem")!
     let store = NSUbiquitousKeyValueStore.default()
     let registry = Registry()
-    var eventTap: CFMachPort!
+    var eventTap: CFMachPort?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let eventTap = CGEvent.tapCreate(tap: .cgSessionEventTap, place: .headInsertEventTap, options: .defaultTap, eventsOfInterest: CGEventMask(1 << CGEventType.keyDown.rawValue), callback: eventCallback, userInfo: nil) {
@@ -61,11 +61,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func enable() {
-        CGEvent.tapEnable(tap: eventTap, enable: true)
+        if let eventTap = eventTap {
+            CGEvent.tapEnable(tap: eventTap, enable: true)
+        }
     }
     
     func disable() {
-        CGEvent.tapEnable(tap: eventTap, enable: false)
+        if let eventTap = eventTap {
+            CGEvent.tapEnable(tap: eventTap, enable: false)
+        }
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
