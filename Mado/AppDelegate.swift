@@ -80,6 +80,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 let menuItem = resizePref.makeMenuItem()
                 menu.addItem(menuItem)
             }
+            
+            // Add Quit
+            menu.addItem(NSMenuItem.separator())
+            
+            let quitMenuItem = NSMenuItem()
+            quitMenuItem.title = "Quit"
+            quitMenuItem.target = self
+            quitMenuItem.action = #selector(quit)
+            menu.addItem(quitMenuItem)
         }
+    }
+    
+    func quit() {
+        NSApp.terminate(self)
     }
 }
