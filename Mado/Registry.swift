@@ -10,11 +10,8 @@ import Cocoa
 
 class Registry {
     var resizePrefs: [ResizePref] = []
-    var monitor: Any!
     
     init() {
-        monitor = NSEvent.addGlobalMonitorForEvents(matching: .keyDown, handler: self.keyDown)
-        
         let left = ResizePref(title: "Left", xExpr: "0", yExpr: "0", wExpr: "W/2", hExpr: "H", shortcut: KeyboardShortcut(keyCode: 123, shiftDown: false, controlDown: true, optionDown: true, commandDown: false))
         resizePrefs.append(left)
 
@@ -25,17 +22,17 @@ class Registry {
         resizePrefs.append(maximize)
     }
     
-    func keyDown(event: NSEvent) {
-        print(event)
-        let shortcut = KeyboardShortcut.from(NSEvent: event)
+    func keyDown(event: CGEvent) -> Bool {
+        let shortcut = KeyboardShortcut.from(CGEvent: event)
+        print("Shortcut: \(shortcut)  KeyCode: \(shortcut.keyCode)")
+
         for resizePref in resizePrefs {
             if resizePref.shortcut == shortcut {
                 resizePref.apply()
+                return true
             }
         }
-    }
-    
-    deinit {
-        NSEvent.removeMonitor(monitor)
+        
+        return false
     }
 }
