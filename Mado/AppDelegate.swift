@@ -7,12 +7,22 @@
 //
 
 import Cocoa
+import Carbon
 import Antlr4
 
 func eventCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent, refcon: UnsafeMutableRawPointer?) -> Unmanaged<CGEvent>? {
     
     if type == .keyDown {
-        let appDelegate = NSApplication.shared().delegate as! AppDelegate
+        let appDelegate = NSApp.delegate as! AppDelegate
+        
+        // If the adhoc resize view is visible and Esc is pressed, close the view
+        let key = KeyboardShortcut.from(CGEvent: event)
+        if key.keyCode == kVK_Escape && appDelegate.adhocResizeView != nil {
+            appDelegate.closeAdhocResizeView(nil)
+            return nil
+        }
+        
+        // If the shortcut registry matched, eat the event
         if appDelegate.registry.keyDown(event: event) {
             return nil
         }
@@ -25,9 +35,13 @@ func eventCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent, re
 class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     let statusImage = NSImage(named: "StatusItem")!
+    var statusMenu = NSMenu()
+
     let store = NSUbiquitousKeyValueStore.default()
     let registry = Registry()
+
     var eventTap: CFMachPort?
+    var adhocResizeView: NSPopover?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let eventTap = CGEvent.tapCreate(tap: .cgSessionEventTap, place: .headInsertEventTap, options: .defaultTap, eventsOfInterest: CGEventMask(1 << CGEventType.keyDown.rawValue), callback: eventCallback, userInfo: nil) {
@@ -78,22 +92,56 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func loadMenu() {
-        statusItem.menu = NSMenu()
-        if let menu = statusItem.menu {
-            for resizePref in registry.resizePrefs {
-                let menuItem = resizePref.makeMenuItem()
-                menu.addItem(menuItem)
-            }
-            
-            // Add Quit
-            menu.addItem(NSMenuItem.separator())
-            
-            let quitMenuItem = NSMenuItem()
-            quitMenuItem.title = "Quit"
-            quitMenuItem.target = self
-            quitMenuItem.action = #selector(quit)
-            menu.addItem(quitMenuItem)
+        for resizePref in registry.resizePrefs {
+            let menuItem = resizePref.makeMenuItem()
+            statusMenu.addItem(menuItem)
         }
+        
+        // Add Quit
+        statusMenu.addItem(NSMenuItem.separator())
+        
+        let quitMenuItem = NSMenuItem()
+        quitMenuItem.title = "Quit"
+        quitMenuItem.target = self
+        quitMenuItem.action = #selector(quit)
+        statusMenu.addItem(quitMenuItem)
+        
+        if let button = statusItem.button {
+            button.target = self
+            button.action = #selector(statusItemAction)
+        }
+    }
+    
+    func statusItemAction(_ sender: AnyObject?) {
+        if adhocResizeView != nil {
+            closeAdhocResizeView(sender)
+            return
+        }
+        
+        if let event = NSApp.currentEvent, event.modifierFlags.contains(.option) {
+            showAdhocResizeView(sender)
+        } else {
+            statusItem.popUpMenu(statusMenu)
+        }
+    }
+    
+    func showAdhocResizeView(_ sender: AnyObject?) {
+        if let button = statusItem.button {
+            let appWindow = AppWindow.frontmost()
+            
+            let adhocResizeView = NSPopover()
+            adhocResizeView.contentViewController = AdhocResize(window: appWindow)
+            adhocResizeView.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
+            self.adhocResizeView = adhocResizeView
+        }
+    }
+    
+    func closeAdhocResizeView(_ sender: AnyObject?) {
+        if let adhocResizeView = adhocResizeView {
+            adhocResizeView.performClose(sender)
+        }
+        
+        adhocResizeView = nil
     }
     
     func quit() {

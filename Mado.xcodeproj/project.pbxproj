@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		738896AA1E52F14200186197 /* Registry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738896A91E52F14200186197 /* Registry.swift */; };
 		738896AF1E557F6B00186197 /* Mado.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738896AE1E557F6B00186197 /* Mado.xib */; };
+		738896B11E56DC8700186197 /* AdhocResize.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738896B01E56DC8700186197 /* AdhocResize.xib */; };
+		738896B31E56DCB600186197 /* AdhocResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738896B21E56DCB600186197 /* AdhocResize.swift */; };
 		73AF11D31E46CA7B00D1CF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF11D21E46CA7B00D1CF5C /* AppDelegate.swift */; };
 		73AF11D51E46CA7B00D1CF5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73AF11D41E46CA7B00D1CF5C /* Assets.xcassets */; };
 		73AF11D81E46CA7B00D1CF5C /* ResizeProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73AF11D61E46CA7B00D1CF5C /* ResizeProfile.xib */; };
@@ -102,6 +104,8 @@
 /* Begin PBXFileReference section */
 		738896A91E52F14200186197 /* Registry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registry.swift; sourceTree = "<group>"; };
 		738896AE1E557F6B00186197 /* Mado.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mado.xib; sourceTree = "<group>"; };
+		738896B01E56DC8700186197 /* AdhocResize.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdhocResize.xib; sourceTree = "<group>"; };
+		738896B21E56DCB600186197 /* AdhocResize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdhocResize.swift; sourceTree = "<group>"; };
 		73AF11CF1E46CA7B00D1CF5C /* Mado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73AF11D21E46CA7B00D1CF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73AF11D41E46CA7B00D1CF5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 				73AF11FB1E4712D100D1CF5C /* Thumbnail.swift */,
 				73AF121C1E4720F900D1CF5C /* ResizeProfile.swift */,
 				73AF11D61E46CA7B00D1CF5C /* ResizeProfile.xib */,
+				738896B21E56DCB600186197 /* AdhocResize.swift */,
+				738896B01E56DC8700186197 /* AdhocResize.xib */,
 				73AF12371E47FEB500D1CF5C /* Mado.g4 */,
 				73AF11D41E46CA7B00D1CF5C /* Assets.xcassets */,
 				73AF11D91E46CA7B00D1CF5C /* Info.plist */,
@@ -407,6 +413,7 @@
 				73AF12381E47FEB500D1CF5C /* Mado.g4 in Resources */,
 				738896AF1E557F6B00186197 /* Mado.xib in Resources */,
 				73AF122F1E47FE6B00D1CF5C /* MadoLexer.tokens in Resources */,
+				738896B11E56DC8700186197 /* AdhocResize.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +464,7 @@
 				73AF12411E4D986C00D1CF5C /* KeyboardShortcut.swift in Sources */,
 				73AF12331E47FE6B00D1CF5C /* MadoVisitor.swift in Sources */,
 				73AF11D31E46CA7B00D1CF5C /* AppDelegate.swift in Sources */,
+				738896B31E56DCB600186197 /* AdhocResize.swift in Sources */,
 				738896AA1E52F14200186197 /* Registry.swift in Sources */,
 				73AF121D1E4720F900D1CF5C /* ResizeProfile.swift in Sources */,
 				73AF122E1E47FE6B00D1CF5C /* MadoLexer.swift in Sources */,
