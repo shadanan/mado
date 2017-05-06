@@ -242,7 +242,7 @@ class AppWindow: CustomStringConvertible {
     
     var description: String {
         get {
-            return "\(appTitle): \(windowTitle) - Frame: \(frame)"
+            return "\(String(describing: appTitle)): \(String(describing: windowTitle)) - Frame: \(String(describing: frame))"
         }
     }
 }
