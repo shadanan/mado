@@ -8,7 +8,12 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AdhocResize" customModule="Mado" customModuleProvider="target">
             <connections>
+                <outlet property="heightTextField" destination="h7D-Bn-2YJ" id="5eK-Zx-4V0"/>
+                <outlet property="titleLabel" destination="R0G-oU-Q0G" id="1Tp-M1-Oyi"/>
                 <outlet property="view" destination="0qv-0W-q0A" id="1TH-hD-Jgg"/>
+                <outlet property="widthTextField" destination="KAw-d3-VAz" id="KzD-C4-kPC"/>
+                <outlet property="xPosTextField" destination="e8e-qv-7T7" id="KWw-Fs-vPF"/>
+                <outlet property="yPosTextField" destination="k0w-9m-eMy" id="lOE-WN-MfV"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -66,6 +71,7 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
+                        <action selector="fieldChanged:" target="-2" id="Yem-bj-mUT"/>
                         <outlet property="nextKeyView" destination="k0w-9m-eMy" id="mee-4y-BUT"/>
                     </connections>
                 </textField>
@@ -84,6 +90,10 @@
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <action selector="fieldChanged:" target="-2" id="MCb-3o-o3J"/>
+                        <outlet property="nextKeyView" destination="KAw-d3-VAz" id="fjr-BI-O8G"/>
+                    </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uen-AT-sfm" userLabel="Size Label">
                     <rect key="frame" x="8" y="40" width="36" height="17"/>
@@ -109,6 +119,7 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
+                        <action selector="fieldChanged:" target="-2" id="FV5-fN-nBK"/>
                         <outlet property="nextKeyView" destination="h7D-Bn-2YJ" id="oN8-ni-s91"/>
                     </connections>
                 </textField>
@@ -128,6 +139,7 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
+                        <action selector="fieldChanged:" target="-2" id="mug-d8-5d1"/>
                         <outlet property="nextKeyView" destination="e8e-qv-7T7" id="CeW-KH-3Pb"/>
                     </connections>
                 </textField>

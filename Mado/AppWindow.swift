@@ -167,7 +167,7 @@ class AppWindow: CustomStringConvertible {
         }
     }
     
-    func resize(pref: ResizePref) {
+    func resize(spec: ResizeSpec) {
         if let visibleFrame = screen()?.visibleFrame, let origin = origin, let size = size {
             let W = Double(visibleFrame.width)
             let H = Double(visibleFrame.height)
@@ -178,10 +178,10 @@ class AppWindow: CustomStringConvertible {
             let w = Double(size.width)
             let h = Double(size.height)
             
-            if let nx = Expr.evaluate(exprStr: pref.xExpr, W: W, H: H, x: x, y: y, w: w, h: h),
-                let ny = Expr.evaluate(exprStr: pref.yExpr, W: W, H: H, x: x, y: y, w: w, h: h),
-                let nw = Expr.evaluate(exprStr: pref.wExpr, W: W, H: H, x: x, y: y, w: w, h: h),
-                let nh = Expr.evaluate(exprStr: pref.hExpr, W: W, H: H, x: x, y: y, w: w, h: h) {
+            if let nx = Expr.evaluate(exprStr: spec.xExpr, W: W, H: H, x: x, y: y, w: w, h: h),
+                let ny = Expr.evaluate(exprStr: spec.yExpr, W: W, H: H, x: x, y: y, w: w, h: h),
+                let nw = Expr.evaluate(exprStr: spec.wExpr, W: W, H: H, x: x, y: y, w: w, h: h),
+                let nh = Expr.evaluate(exprStr: spec.hExpr, W: W, H: H, x: x, y: y, w: w, h: h) {
                 globalFrame = CGRect(x: nx + X, y: ny + Y, width: nw, height: nh)
             }
         }

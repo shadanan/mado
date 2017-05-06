@@ -12,13 +12,19 @@ class Registry {
     var resizePrefs: [ResizePref] = []
     
     init() {
-        let left = ResizePref(title: "Left", xExpr: "0", yExpr: "0", wExpr: "W/2", hExpr: "H", shortcut: KeyboardShortcut(keyCode: 123, shiftDown: false, controlDown: true, optionDown: true, commandDown: false))
+        let left = ResizePref(title: "Left",
+                              resizeSpec: ResizeSpec(xExpr: "0", yExpr: "0", wExpr: "W/2", hExpr: "H"),
+                              shortcut: KeyboardShortcut(keyCode: 123, shiftDown: false, controlDown: true, optionDown: true, commandDown: false))
         resizePrefs.append(left)
 
-        let right = ResizePref(title: "Right", xExpr: "W/2", yExpr: "0", wExpr: "W/2", hExpr: "H", shortcut: KeyboardShortcut(keyCode: 124, shiftDown: false, controlDown: true, optionDown: true, commandDown: false))
+        let right = ResizePref(title: "Right",
+                               resizeSpec: ResizeSpec(xExpr: "W/2", yExpr: "0", wExpr: "W/2", hExpr: "H"),
+                               shortcut: KeyboardShortcut(keyCode: 124, shiftDown: false, controlDown: true, optionDown: true, commandDown: false))
         resizePrefs.append(right)
 
-        let maximize = ResizePref(title: "Maximize", xExpr: "0", yExpr: "0", wExpr: "W", hExpr: "H", shortcut: KeyboardShortcut(keyCode: 36, shiftDown: false, controlDown: true, optionDown: true, commandDown: false))
+        let maximize = ResizePref(title: "Maximize",
+                                  resizeSpec: ResizeSpec(xExpr: "0", yExpr: "0", wExpr: "W", hExpr: "H"),
+                                  shortcut: KeyboardShortcut(keyCode: 36, shiftDown: false, controlDown: true, optionDown: true, commandDown: false))
         resizePrefs.append(maximize)
     }
     

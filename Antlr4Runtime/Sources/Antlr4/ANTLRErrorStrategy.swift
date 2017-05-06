@@ -1,20 +1,20 @@
-/// Copyright (c) 2012-2016 The ANTLR Project. All rights reserved.
+/// Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.
 /// Use of this file is governed by the BSD 3-clause license that
 /// can be found in the LICENSE.txt file in the project root.
 /// The interface for defining strategies to deal with syntax errors encountered
 /// during a parse by ANTLR-generated parsers. We distinguish between three
 /// different kinds of errors:
-/// 
+///
 /// <ul>
 /// <li>The parser could not figure out which path to take in the ATN (none of
 /// the available alternatives could possibly match)</li>
 /// <li>The current input does not match what we were looking for</li>
 /// <li>A predicate evaluated to false</li>
 /// </ul>
-/// 
+///
 /// Implementations of this interface report syntax errors by calling
 /// {@link org.antlr.v4.runtime.Parser#notifyErrorListeners}.
-/// 
+///
 /// <p>TODO: what to do about lexers</p>
 
 public protocol ANTLRErrorStrategy {
@@ -27,14 +27,14 @@ public protocol ANTLRErrorStrategy {
     /// strategy successfully recovers from the match failure, this method
     /// returns the {@link org.antlr.v4.runtime.Token} instance which should be treated as the
     /// successful result of the match.
-    /// 
+    ///
     /// <p>This method handles the consumption of any tokens - the caller should
     /// <b>not</b> call {@link org.antlr.v4.runtime.Parser#consume} after a successful recovery.</p>
-    /// 
+    ///
     /// <p>Note that the calling code will not report an error if this method
     /// returns successfully. The error strategy implementation is responsible
     /// for calling {@link org.antlr.v4.runtime.Parser#notifyErrorListeners} as appropriate.</p>
-    /// 
+    ///
     /// - parameter recognizer: the parser instance
     /// -  org.antlr.v4.runtime.RecognitionException if the error strategy was not able to
     /// recover from the unexpected input symbol
@@ -72,11 +72,12 @@ public protocol ANTLRErrorStrategy {
     /// the parsing process
     func sync(_ recognizer: Parser) throws // RecognitionException;
 
-    /// Tests whether or not {@code recognizer} is in the process of recovering
+    /// Tests whether or not recognizer} is in the process of recovering
     /// from an error. In error recovery mode, {@link org.antlr.v4.runtime.Parser#consume} adds
     /// symbols to the parse tree by calling
-    /// {@link org.antlr.v4.runtime.ParserRuleContext#addErrorNode(org.antlr.v4.runtime.Token)} instead of
-    /// {@link org.antlr.v4.runtime.ParserRuleContext#addChild(org.antlr.v4.runtime.Token)}.
+    /// {@link Parser#createErrorNode(ParserRuleContext, Token)} then
+    /// {@link ParserRuleContext#addErrorNode(ErrorNode)} instead of
+    /// {@link Parser#createTerminalNode(ParserRuleContext, Token)}.
     ///
     /// - parameter recognizer: the parser instance
     /// - returns: {@code true} if the parser is currently recovering from a parse
@@ -85,13 +86,13 @@ public protocol ANTLRErrorStrategy {
 
     /// This method is called by when the parser successfully matches an input
     /// symbol.
-    /// 
+    ///
     /// - parameter recognizer: the parser instance
     func reportMatch(_ recognizer: Parser)
 
     /// Report any kind of {@link org.antlr.v4.runtime.RecognitionException}. This method is called by
     /// the default exception handler generated for a rule method.
-    /// 
+    ///
     /// - parameter recognizer: the parser instance
     /// - parameter e: the recognition exception to report
     func reportError(_ recognizer: Parser, _ e: AnyObject)

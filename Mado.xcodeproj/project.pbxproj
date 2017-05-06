@@ -11,6 +11,7 @@
 		738896AF1E557F6B00186197 /* Mado.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738896AE1E557F6B00186197 /* Mado.xib */; };
 		738896B11E56DC8700186197 /* AdhocResize.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738896B01E56DC8700186197 /* AdhocResize.xib */; };
 		738896B31E56DCB600186197 /* AdhocResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738896B21E56DCB600186197 /* AdhocResize.swift */; };
+		739BEEF61EBE75EC00845C96 /* Antlr4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739BEEEF1EBE754700845C96 /* Antlr4.framework */; };
 		73AF11D31E46CA7B00D1CF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF11D21E46CA7B00D1CF5C /* AppDelegate.swift */; };
 		73AF11D51E46CA7B00D1CF5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73AF11D41E46CA7B00D1CF5C /* Assets.xcassets */; };
 		73AF11D81E46CA7B00D1CF5C /* ResizeProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73AF11D61E46CA7B00D1CF5C /* ResizeProfile.xib */; };
@@ -19,7 +20,6 @@
 		73AF11FC1E4712D100D1CF5C /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF11FB1E4712D100D1CF5C /* Thumbnail.swift */; };
 		73AF121D1E4720F900D1CF5C /* ResizeProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF121C1E4720F900D1CF5C /* ResizeProfile.swift */; };
 		73AF121F1E4727B000D1CF5C /* ExprEvaluate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF121E1E4727B000D1CF5C /* ExprEvaluate.swift */; };
-		73AF12201E472C5D00D1CF5C /* Antlr4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73AF12151E471FA300D1CF5C /* Antlr4.framework */; };
 		73AF122C1E47FE6B00D1CF5C /* Mado.tokens in Resources */ = {isa = PBXBuildFile; fileRef = 73AF12231E47FE6B00D1CF5C /* Mado.tokens */; };
 		73AF122D1E47FE6B00D1CF5C /* MadoBaseVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12241E47FE6B00D1CF5C /* MadoBaseVisitor.swift */; };
 		73AF122E1E47FE6B00D1CF5C /* MadoLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12251E47FE6B00D1CF5C /* MadoLexer.swift */; };
@@ -29,13 +29,40 @@
 		73AF12321E47FE6B00D1CF5C /* MadoParserATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12291E47FE6B00D1CF5C /* MadoParserATN.swift */; };
 		73AF12331E47FE6B00D1CF5C /* MadoVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF122A1E47FE6B00D1CF5C /* MadoVisitor.swift */; };
 		73AF12381E47FEB500D1CF5C /* Mado.g4 in Resources */ = {isa = PBXBuildFile; fileRef = 73AF12371E47FEB500D1CF5C /* Mado.g4 */; };
-		73AF123A1E4841AF00D1CF5C /* Antlr4.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73AF12151E471FA300D1CF5C /* Antlr4.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73AF12411E4D986C00D1CF5C /* KeyboardShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12401E4D986C00D1CF5C /* KeyboardShortcut.swift */; };
 		73AF12431E4FC7D000D1CF5C /* ResizePref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12421E4FC7D000D1CF5C /* ResizePref.swift */; };
 		73AF12451E4FD60300D1CF5C /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12441E4FD60300D1CF5C /* AppWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		739BEEEE1EBE754700845C96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 739BEEE81EBE754700845C96 /* Antlr4.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9A4211C1BCCC35000A9CD35;
+			remoteInfo = "Antlr4 OSX";
+		};
+		739BEEF01EBE754700845C96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 739BEEE81EBE754700845C96 /* Antlr4.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9A422F81BCCD47300A9CD35;
+			remoteInfo = "Antlr4 IOS";
+		};
+		739BEEF21EBE754700845C96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 739BEEE81EBE754700845C96 /* Antlr4.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9A424A81BCD348C00A9CD35;
+			remoteInfo = Antlr4Tests;
+		};
+		739BEEF41EBE75DC00845C96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 739BEEE81EBE754700845C96 /* Antlr4.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F9A4211B1BCCC35000A9CD35;
+			remoteInfo = "Antlr4 OSX";
+		};
 		73AF11DF1E46CA7B00D1CF5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 73AF11C71E46CA7B00D1CF5C /* Project object */;
@@ -50,41 +77,6 @@
 			remoteGlobalIDString = 73AF11CE1E46CA7B00D1CF5C;
 			remoteInfo = Mado;
 		};
-		73AF12141E471FA300D1CF5C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F9A4211C1BCCC35000A9CD35;
-			remoteInfo = "Antlr4 OSX";
-		};
-		73AF12161E471FA300D1CF5C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F9A422F81BCCD47300A9CD35;
-			remoteInfo = "Antlr4 IOS";
-		};
-		73AF12181E471FA300D1CF5C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F9A424A81BCD348C00A9CD35;
-			remoteInfo = Antlr4Tests;
-		};
-		73AF121A1E471FE100D1CF5C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F9A4211B1BCCC35000A9CD35;
-			remoteInfo = "Antlr4 OSX";
-		};
-		73AF123B1E4841AF00D1CF5C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F9A4211B1BCCC35000A9CD35;
-			remoteInfo = "Antlr4 OSX";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,7 +86,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				73AF123A1E4841AF00D1CF5C /* Antlr4.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +97,7 @@
 		738896AE1E557F6B00186197 /* Mado.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mado.xib; sourceTree = "<group>"; };
 		738896B01E56DC8700186197 /* AdhocResize.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdhocResize.xib; sourceTree = "<group>"; };
 		738896B21E56DCB600186197 /* AdhocResize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdhocResize.swift; sourceTree = "<group>"; };
+		739BEEE81EBE754700845C96 /* Antlr4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Antlr4.xcodeproj; path = Antlr4Runtime/Antlr4.xcodeproj; sourceTree = "<group>"; };
 		73AF11CF1E46CA7B00D1CF5C /* Mado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73AF11D21E46CA7B00D1CF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73AF11D41E46CA7B00D1CF5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,7 +110,6 @@
 		73AF11ED1E46CA7B00D1CF5C /* MadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadoUITests.swift; sourceTree = "<group>"; };
 		73AF11EF1E46CA7B00D1CF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73AF11FB1E4712D100D1CF5C /* Thumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
-		73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Antlr4.xcodeproj; path = Antlr4Runtime/Antlr4.xcodeproj; sourceTree = "<group>"; };
 		73AF121C1E4720F900D1CF5C /* ResizeProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeProfile.swift; sourceTree = "<group>"; };
 		73AF121E1E4727B000D1CF5C /* ExprEvaluate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExprEvaluate.swift; sourceTree = "<group>"; };
 		73AF12231E47FE6B00D1CF5C /* Mado.tokens */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Mado.tokens; path = Antlr4/Mado.tokens; sourceTree = "<group>"; };
@@ -141,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73AF12201E472C5D00D1CF5C /* Antlr4.framework in Frameworks */,
+				739BEEF61EBE75EC00845C96 /* Antlr4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +153,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		739BEEE91EBE754700845C96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				739BEEEF1EBE754700845C96 /* Antlr4.framework */,
+				739BEEF11EBE754700845C96 /* Antlr4.framework */,
+				739BEEF31EBE754700845C96 /* Antlr4Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		73AF11C61E46CA7B00D1CF5C = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +172,7 @@
 				73AF11E11E46CA7B00D1CF5C /* MadoTests */,
 				73AF11EC1E46CA7B00D1CF5C /* MadoUITests */,
 				73AF11D01E46CA7B00D1CF5C /* Products */,
-				73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */,
+				739BEEE81EBE754700845C96 /* Antlr4.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,16 +226,6 @@
 			path = MadoUITests;
 			sourceTree = "<group>";
 		};
-		73AF120F1E471FA300D1CF5C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				73AF12151E471FA300D1CF5C /* Antlr4.framework */,
-				73AF12171E471FA300D1CF5C /* Antlr4.framework */,
-				73AF12191E471FA300D1CF5C /* Antlr4Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		73AF12221E47FE5300D1CF5C /* Antlr4 */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,8 +265,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				73AF121B1E471FE100D1CF5C /* PBXTargetDependency */,
-				73AF123C1E4841AF00D1CF5C /* PBXTargetDependency */,
+				739BEEF51EBE75DC00845C96 /* PBXTargetDependency */,
 			);
 			name = Mado;
 			productName = Mado;
@@ -365,8 +355,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 73AF120F1E471FA300D1CF5C /* Products */;
-					ProjectRef = 73AF120E1E471FA300D1CF5C /* Antlr4.xcodeproj */;
+					ProductGroup = 739BEEE91EBE754700845C96 /* Products */;
+					ProjectRef = 739BEEE81EBE754700845C96 /* Antlr4.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -379,25 +369,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		73AF12151E471FA300D1CF5C /* Antlr4.framework */ = {
+		739BEEEF1EBE754700845C96 /* Antlr4.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Antlr4.framework;
-			remoteRef = 73AF12141E471FA300D1CF5C /* PBXContainerItemProxy */;
+			remoteRef = 739BEEEE1EBE754700845C96 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		73AF12171E471FA300D1CF5C /* Antlr4.framework */ = {
+		739BEEF11EBE754700845C96 /* Antlr4.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Antlr4.framework;
-			remoteRef = 73AF12161E471FA300D1CF5C /* PBXContainerItemProxy */;
+			remoteRef = 739BEEF01EBE754700845C96 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		73AF12191E471FA300D1CF5C /* Antlr4Tests.xctest */ = {
+		739BEEF31EBE754700845C96 /* Antlr4Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = Antlr4Tests.xctest;
-			remoteRef = 73AF12181E471FA300D1CF5C /* PBXContainerItemProxy */;
+			remoteRef = 739BEEF21EBE754700845C96 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -491,6 +481,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		739BEEF51EBE75DC00845C96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Antlr4 OSX";
+			targetProxy = 739BEEF41EBE75DC00845C96 /* PBXContainerItemProxy */;
+		};
 		73AF11E01E46CA7B00D1CF5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 73AF11CE1E46CA7B00D1CF5C /* Mado */;
@@ -500,16 +495,6 @@
 			isa = PBXTargetDependency;
 			target = 73AF11CE1E46CA7B00D1CF5C /* Mado */;
 			targetProxy = 73AF11EA1E46CA7B00D1CF5C /* PBXContainerItemProxy */;
-		};
-		73AF121B1E471FE100D1CF5C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Antlr4 OSX";
-			targetProxy = 73AF121A1E471FE100D1CF5C /* PBXContainerItemProxy */;
-		};
-		73AF123C1E4841AF00D1CF5C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Antlr4 OSX";
-			targetProxy = 73AF123B1E4841AF00D1CF5C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

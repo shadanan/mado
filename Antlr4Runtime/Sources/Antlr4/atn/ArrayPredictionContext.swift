@@ -1,4 +1,4 @@
-/// Copyright (c) 2012-2016 The ANTLR Project. All rights reserved.
+/// Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.
 /// Use of this file is governed by the BSD 3-clause license that
 /// can be found in the LICENSE.txt file in the project root.
 
@@ -118,8 +118,6 @@ public func ==(lhs: ArrayPredictionContext, rhs: ArrayPredictionContext) -> Bool
         return false
     }
 
-    // return lhs.returnStates == rhs.returnStates && lhs.parents == rhs.parents
-
-    return ArrayEquals(lhs.returnStates, rhs.returnStates) && ArrayEquals(lhs.parents, rhs.parents)
+    return lhs.returnStates == rhs.returnStates && lhs.parents == rhs.parents
 }
 

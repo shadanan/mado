@@ -1,4 +1,4 @@
-/// Copyright (c) 2012-2016 The ANTLR Project. All rights reserved.
+/// Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.
 /// Use of this file is governed by the BSD 3-clause license that
 /// can be found in the LICENSE.txt file in the project root.
 
@@ -21,8 +21,8 @@ open class Lexer: Recognizer<LexerATNSimulator>
 
     public static let DEFAULT_TOKEN_CHANNEL: Int = CommonToken.DEFAULT_CHANNEL
     public static let HIDDEN: Int = CommonToken.HIDDEN_CHANNEL
-    public static let MIN_CHAR_VALUE: Int = Character("\u{0000}").unicodeValue
-    public static let MAX_CHAR_VALUE: Int = Character("\u{FFFE}").unicodeValue
+    public static let MIN_CHAR_VALUE: Int = Character.MIN_VALUE;
+    public static let MAX_CHAR_VALUE: Int = Character.MAX_VALUE;
 
     public var _input: CharStream?
     internal var _tokenFactorySourcePair: (TokenSource?, CharStream?)
@@ -129,9 +129,6 @@ open class Lexer: Recognizer<LexerATNSimulator>
                 _text = nil
                 repeat {
                     _type = CommonToken.INVALID_TYPE
-                    // print("nextToken line \(_tokenStartLine)" + " at \(try _input!.LA(1))" +
-                    //   " in mode \(mode)"  +
-                    //   " at index \(_input!.index())" );
                     var ttype: Int
                     do {
                         ttype = try getInterpreter().match(_input, _mode)
@@ -189,12 +186,10 @@ open class Lexer: Recognizer<LexerATNSimulator>
     open func popMode() throws -> Int {
         if _modeStack.isEmpty {
             throw ANTLRError.unsupportedOperation(msg: " EmptyStackException")
-            //RuntimeException(" EmptyStackException")
-            //throwException() /* throw EmptyStackException(); } */
         }
 
         if LexerATNSimulator.debug {
-            print("popMode back to \(_modeStack.peek())")
+            print("popMode back to \(String(describing: _modeStack.peek()))")
         }
         mode(_modeStack.pop())
         return _mode
