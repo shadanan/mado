@@ -1,4 +1,4 @@
-// Generated from Mado.g4 by ANTLR 4.6
+// Generated from Mado.g4 by ANTLR 4.7
 import Antlr4
 
 open class MadoLexer: Lexer {
@@ -14,6 +14,10 @@ open class MadoLexer: Lexer {
 	internal static let _sharedContextCache:PredictionContextCache = PredictionContextCache()
 	public static let T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, Number=7, 
                    Variable=8, WHITESPACE=9
+	public static let channelNames: [String] = [
+		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
+	]
+
 	public static let modeNames: [String] = [
 		"DEFAULT_MODE"
 	]
@@ -61,7 +65,7 @@ open class MadoLexer: Lexer {
     }
 
 	public override init(_ input: CharStream) {
-	    RuntimeMetaData.checkVersion("4.6", RuntimeMetaData.VERSION)
+	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
 		super.init(input)
 		_interp = LexerATNSimulator(self, MadoLexer._ATN, MadoLexer._decisionToDFA, MadoLexer._sharedContextCache)
 	}
@@ -74,6 +78,9 @@ open class MadoLexer: Lexer {
 
 	override
 	open func getSerializedATN() -> String { return MadoLexer._serializedATN }
+
+	override
+	open func getChannelNames() -> [String] { return MadoLexer.channelNames }
 
 	override
 	open func getModeNames() -> [String] { return MadoLexer.modeNames }

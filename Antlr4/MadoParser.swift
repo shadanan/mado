@@ -1,4 +1,4 @@
-// Generated from Mado.g4 by ANTLR 4.6
+// Generated from Mado.g4 by ANTLR 4.7
 import Antlr4
 
 open class MadoParser: Parser {
@@ -71,7 +71,7 @@ open class MadoParser: Parser {
 	}
 
 	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.6", RuntimeMetaData.VERSION)
+	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,MadoParser._ATN,MadoParser._decisionToDFA, MadoParser._sharedContextCache)
 	}
