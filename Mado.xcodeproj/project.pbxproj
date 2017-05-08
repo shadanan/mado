@@ -422,7 +422,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env python";
-			shellScript = "import os\nimport subprocess\n\nproc = subprocess.Popen(['git', 'describe'], stdout=subprocess.PIPE)\ngit_describe, _ = proc.communicate()\nversion, build, _ = git_describe[1:].split('-')\nbundle_version = '.'.join([version, build])\n\nplist_file = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['INFOPLIST_PATH'])\nsubprocess.call(['/usr/libexec/PlistBuddy', '-c', \"Set :CFBundleVersion %s\" % bundle_version, plist_file])\nsubprocess.call(['/usr/libexec/PlistBuddy', '-c', \"Set :CFBundleShortVersionString %s\" % version, plist_file])";
+			shellScript = "import os\nimport subprocess\n\nproc = subprocess.Popen(['git', 'describe'], stdout=subprocess.PIPE)\nstdout, _ = proc.communicate()\ngit_describe = stdout.decode('utf-8').strip()[1:]\n\nif '-' in git_describe:\n    version, build, _ = git_describe.split('-')\nelse:\n    version = git_describe\n    build = \"0\"\n\nbundle_version = '.'.join([version, build])\n\nplist_file = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['INFOPLIST_PATH'])\nsubprocess.call(['/usr/libexec/PlistBuddy', '-c', \"Set :CFBundleVersion %s\" % bundle_version, plist_file])\nsubprocess.call(['/usr/libexec/PlistBuddy', '-c', \"Set :CFBundleShortVersionString %s\" % version, plist_file])";
 		};
 /* End PBXShellScriptBuildPhase section */
 
