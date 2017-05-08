@@ -27,7 +27,7 @@ class Thumbnail: NSView {
     
     override func draw(_ dirtyRect: NSRect) {
         let outer = NSBezierPath.init(roundedRect: bounds, xRadius: radius, yRadius: radius)
-        NSColor.lightGray.set()
+        NSColor.gray.set()
         outer.fill()
         
         if let xpos = xpos, let ypos = ypos, let width = width, let height = height {
