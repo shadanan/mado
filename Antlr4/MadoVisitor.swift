@@ -8,7 +8,7 @@ import Antlr4
  * @param <T> The return type of the visit operation. Use {@link Void} for
  * operations with no return type.
  */
-open class MadoVisitor<T>: AbstractParseTreeVisitor<T> {
+open class MadoVisitor<T>: ParseTreeVisitor<T> {
 	/**
 	 * Visit a parse tree produced by the {@code atomVariableExpr}
 	 * labeled alternative in {@link MadoParser#expr}.

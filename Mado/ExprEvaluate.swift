@@ -9,7 +9,7 @@
 import Antlr4
 import Foundation
 
-class Expr: MadoVisitor<Double> {
+class Expr: MadoBaseVisitor<Double> {
     let W: Double
     let H: Double
     let x: Double
