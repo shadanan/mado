@@ -11,6 +11,7 @@
 		738896AF1E557F6B00186197 /* Mado.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738896AE1E557F6B00186197 /* Mado.xib */; };
 		738896B11E56DC8700186197 /* AdhocResize.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738896B01E56DC8700186197 /* AdhocResize.xib */; };
 		738896B31E56DCB600186197 /* AdhocResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738896B21E56DCB600186197 /* AdhocResize.swift */; };
+		73895FA51EC909A900C5239F /* RegistryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73895FA41EC909A900C5239F /* RegistryItem.swift */; };
 		73AF11D31E46CA7B00D1CF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF11D21E46CA7B00D1CF5C /* AppDelegate.swift */; };
 		73AF11D51E46CA7B00D1CF5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73AF11D41E46CA7B00D1CF5C /* Assets.xcassets */; };
 		73AF11D81E46CA7B00D1CF5C /* ResizeProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73AF11D61E46CA7B00D1CF5C /* ResizeProfile.xib */; };
@@ -29,7 +30,6 @@
 		73AF12331E47FE6B00D1CF5C /* MadoVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF122A1E47FE6B00D1CF5C /* MadoVisitor.swift */; };
 		73AF12381E47FEB500D1CF5C /* Mado.g4 in Resources */ = {isa = PBXBuildFile; fileRef = 73AF12371E47FEB500D1CF5C /* Mado.g4 */; };
 		73AF12411E4D986C00D1CF5C /* KeyboardShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12401E4D986C00D1CF5C /* KeyboardShortcut.swift */; };
-		73AF12431E4FC7D000D1CF5C /* ResizePref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12421E4FC7D000D1CF5C /* ResizePref.swift */; };
 		73AF12451E4FD60300D1CF5C /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AF12441E4FD60300D1CF5C /* AppWindow.swift */; };
 		73E5F2591EBE806A00FDF1A6 /* Antlr4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739BEEEF1EBE754700845C96 /* Antlr4.framework */; };
 		73E5F25A1EBE818400FDF1A6 /* Antlr4.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 739BEEEF1EBE754700845C96 /* Antlr4.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -92,6 +92,7 @@
 		738896AE1E557F6B00186197 /* Mado.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mado.xib; sourceTree = "<group>"; };
 		738896B01E56DC8700186197 /* AdhocResize.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdhocResize.xib; sourceTree = "<group>"; };
 		738896B21E56DCB600186197 /* AdhocResize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdhocResize.swift; sourceTree = "<group>"; };
+		73895FA41EC909A900C5239F /* RegistryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistryItem.swift; sourceTree = "<group>"; };
 		739BEEE81EBE754700845C96 /* Antlr4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Antlr4.xcodeproj; path = Antlr4Runtime/Antlr4.xcodeproj; sourceTree = "<group>"; };
 		73AF11CF1E46CA7B00D1CF5C /* Mado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73AF11D21E46CA7B00D1CF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,7 +119,6 @@
 		73AF12371E47FEB500D1CF5C /* Mado.g4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mado.g4; sourceTree = SOURCE_ROOT; };
 		73AF123E1E4D968500D1CF5C /* Mado.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mado.entitlements; sourceTree = "<group>"; };
 		73AF12401E4D986C00D1CF5C /* KeyboardShortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardShortcut.swift; path = KeyboardShortcut/Sources/KeyboardShortcut.swift; sourceTree = "<group>"; };
-		73AF12421E4FC7D000D1CF5C /* ResizePref.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizePref.swift; sourceTree = "<group>"; };
 		73AF12441E4FD60300D1CF5C /* AppWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,7 +189,7 @@
 				73AF12441E4FD60300D1CF5C /* AppWindow.swift */,
 				73AF121E1E4727B000D1CF5C /* ExprEvaluate.swift */,
 				738896A91E52F14200186197 /* Registry.swift */,
-				73AF12421E4FC7D000D1CF5C /* ResizePref.swift */,
+				73895FA41EC909A900C5239F /* RegistryItem.swift */,
 				73AF11FB1E4712D100D1CF5C /* Thumbnail.swift */,
 				73AF121C1E4720F900D1CF5C /* ResizeProfile.swift */,
 				73AF11D61E46CA7B00D1CF5C /* ResizeProfile.xib */,
@@ -432,8 +432,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				73AF12301E47FE6B00D1CF5C /* MadoLexerATN.swift in Sources */,
+				73895FA51EC909A900C5239F /* RegistryItem.swift in Sources */,
 				73AF12311E47FE6B00D1CF5C /* MadoParser.swift in Sources */,
-				73AF12431E4FC7D000D1CF5C /* ResizePref.swift in Sources */,
 				73AF121F1E4727B000D1CF5C /* ExprEvaluate.swift in Sources */,
 				73AF122D1E47FE6B00D1CF5C /* MadoBaseVisitor.swift in Sources */,
 				73AF12451E4FD60300D1CF5C /* AppWindow.swift in Sources */,

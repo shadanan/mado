@@ -9,6 +9,20 @@
 import Cocoa
 import Foundation
 
+class ResizeSpec: NSObject {
+    var xExpr: String
+    var yExpr: String
+    var wExpr: String
+    var hExpr: String
+    
+    init(xExpr: String, yExpr: String, wExpr: String, hExpr: String) {
+        self.xExpr = xExpr
+        self.yExpr = yExpr
+        self.wExpr = wExpr
+        self.hExpr = hExpr
+    }
+}
+
 class AppWindow: CustomStringConvertible {
     let app: NSRunningApplication
     let appElement: AXUIElement
