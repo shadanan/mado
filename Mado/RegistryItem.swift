@@ -12,6 +12,19 @@ protocol RegistryItem {
     func makeMenuItem() -> NSMenuItem
     func matches(shortcut: KeyboardShortcut) -> Bool
     func apply()
+
+    func encode() -> [String: Any]
+    static func decode(encodedRegistryItem: [String: Any]) -> RegistryItem?
+}
+
+func decode(encodedRegistryItem: [String: Any]) -> RegistryItem? {
+    if encodedRegistryItem["type"] as? String == "Resize" {
+        return Resize.decode(encodedRegistryItem: encodedRegistryItem)
+    } else if encodedRegistryItem["type"] as? String == "Separator" {
+        return Separator.decode(encodedRegistryItem: encodedRegistryItem)
+    }
+    
+    return nil
 }
 
 class Resize: NSObject, RegistryItem {
@@ -57,20 +70,64 @@ class Resize: NSObject, RegistryItem {
             frontMost.resize(spec: resizeSpec)
         }
     }
+    
+    func encode() -> [String : Any] {
+        return [
+            "type": "Resize",
+            "title": title,
+            "xExpr": resizeSpec.xExpr,
+            "yExpr": resizeSpec.yExpr,
+            "wExpr": resizeSpec.wExpr,
+            "hExpr": resizeSpec.hExpr,
+            "keyCode": shortcut.keyCode,
+            "shiftDown": shortcut.shiftDown,
+            "controlDown": shortcut.controlDown,
+            "optionDown": shortcut.optionDown,
+            "commandDown": shortcut.commandDown]
+    }
+
+    static func decode(encodedRegistryItem: [String: Any]) -> RegistryItem? {
+        if let title = encodedRegistryItem["title"] as? String,
+            let xExpr = encodedRegistryItem["xExpr"] as? String,
+            let yExpr = encodedRegistryItem["yExpr"] as? String,
+            let wExpr = encodedRegistryItem["wExpr"] as? String,
+            let hExpr = encodedRegistryItem["hExpr"] as? String,
+            let keyCode = encodedRegistryItem["keyCode"] as? Int,
+            let shiftDown = encodedRegistryItem["shiftDown"] as? Bool,
+            let controlDown = encodedRegistryItem["controlDown"] as? Bool,
+            let optionDown = encodedRegistryItem["optionDown"] as? Bool,
+            let commandDown = encodedRegistryItem["commandDown"] as? Bool {
+            
+            return Resize(
+                title: title,
+                resizeSpec: ResizeSpec(xExpr: xExpr, yExpr: yExpr, wExpr: wExpr, hExpr: hExpr),
+                shortcut: KeyboardShortcut(keyCode: keyCode, shiftDown: shiftDown, controlDown: controlDown, optionDown: optionDown, commandDown: commandDown))
+        }
+        
+        return nil
+    }
 }
 
 class Separator: NSObject, RegistryItem {
     static let separator = Separator()
-    
+
     func makeMenuItem() -> NSMenuItem {
         return NSMenuItem.separator()
     }
-    
+
     func matches(shortcut: KeyboardShortcut) -> Bool {
         return false
     }
     
     func apply() {
         return
+    }
+
+    func encode() -> [String : Any] {
+        return ["type": "Separator"]
+    }
+    
+    static func decode(encodedRegistryItem: [String : Any]) -> RegistryItem? {
+        return separator
     }
 }

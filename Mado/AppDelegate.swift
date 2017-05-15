@@ -92,7 +92,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func loadMenu() {
-        for resizePref in registry.resizePrefs {
+        for resizePref in registry.registryItems {
             let menuItem = resizePref.makeMenuItem()
             statusMenu.addItem(menuItem)
         }
