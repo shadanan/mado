@@ -97,9 +97,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             statusMenu.addItem(menuItem)
         }
         
-        // Add Quit
         statusMenu.addItem(NSMenuItem.separator())
         
+        // About Menu Item
+        let aboutMenuItem = NSMenuItem()
+        aboutMenuItem.title = "About"
+        aboutMenuItem.target = self
+        aboutMenuItem.action = #selector(about)
+        statusMenu.addItem(aboutMenuItem)
+        
+        // Quit Menu Item
         let quitMenuItem = NSMenuItem()
         quitMenuItem.title = "Quit"
         quitMenuItem.target = self
@@ -142,6 +149,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         adhocResizeView = nil
+    }
+    
+    func about() {
+        NSApp.orderFrontStandardAboutPanel(self)
     }
     
     func quit() {
